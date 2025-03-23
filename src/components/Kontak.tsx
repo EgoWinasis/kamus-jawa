@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; 
 import {
   GlobeAltIcon,
   AtSymbolIcon,
@@ -22,29 +23,31 @@ const ContactPage = () => {
           <div className="text-left">
             <h1 className="text-3xl font-bold text-gray-800">Tentang Saya</h1>
             <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-  Saya <span className="font-semibold">Ego Winasis</span>, seorang 
-  <span className="font-semibold"> Fullstack Developer</span> dan 
-  <span className="font-semibold"> IT Enthusiast</span> dengan pengalaman luas dalam pengembangan perangkat lunak. 
-  Keahlian saya mencakup pengembangan aplikasi berbasis web, integrasi sistem, serta implementasi teknologi IoT. 
-</p>
-
-
+              Saya <span className="font-semibold">Ego Winasis</span>, seorang 
+              <span className="font-semibold"> Fullstack Developer</span> dan 
+              <span className="font-semibold"> IT Enthusiast</span> dengan pengalaman luas dalam pengembangan perangkat lunak. 
+              Keahlian saya mencakup pengembangan aplikasi berbasis web, integrasi sistem, serta implementasi teknologi IoT. 
+            </p>
           </div>
           {/* Gambar */}
-          <img
+          <Image
             src="/profile1.jpg"
             alt="Profile 1"
-            className="w-full h-full object-cover rounded-lg shadow"
+            width={400} // ✅ Add fixed width
+            height={400} // ✅ Add fixed height
+            className="w-full h-auto object-cover rounded-lg shadow"
           />
         </div>
 
         {/* Biodata & Gambar */}
         <div className="grid grid-cols-2 gap-6 items-center mt-8">
           {/* Gambar */}
-          <img
+          <Image
             src="/profile2.jpg"
             alt="Profile 2"
-            className="w-full h-full object-cover rounded-lg shadow"
+            width={400} // ✅ Add fixed width
+            height={400} // ✅ Add fixed height
+            className="w-full h-auto object-cover rounded-lg shadow"
           />
           {/* Biodata */}
           <div className="text-left">
@@ -65,8 +68,6 @@ const ContactPage = () => {
             </ul>
           </div>
         </div>
-
-
 
         {/* Follow Me */}
         <div className="mt-10 text-center">

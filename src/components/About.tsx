@@ -1,16 +1,20 @@
 import React from "react";
-
+import Image from "next/image"; 
 const About = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-6 py-12">
       <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
         {/* Gambar Header */}
         <div className="relative">
-          <img
+         
+        <Image
             src="/gambar.png"
             alt="About App"
+            layout="responsive"
+            width={800} // Adjust as needed
+            height={600} // Adjust as needed
             className="w-full h-full object-cover"
-          />
+            />
         
         </div>
 
