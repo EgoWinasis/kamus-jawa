@@ -22,6 +22,15 @@ interface ApiResponse {
   };
 }
 
+interface DetailData {
+  id: number;
+  name: string;
+  description: string;
+  phonetic_transcription: string;
+  audio: string;
+  types: string[];
+}
+
 
 export default function Results() {
   const searchParams = useSearchParams();
@@ -38,7 +47,7 @@ export default function Results() {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  const [detailData, setDetailData] = useState<unknown>(null);
+  const [detailData, setDetailData] = useState<DetailData | null>(null);
 
 
   
@@ -87,7 +96,6 @@ export default function Results() {
         const data = await response.json();
         
        
-        
         if (data && typeof data === "object") {
             setDetailData(data);
         }
