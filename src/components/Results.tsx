@@ -34,7 +34,7 @@ export default function Results() {
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
-  const [detailData, setDetailData] = useState<any>(null);
+  const [detailData, setDetailData] = useState<unknown>(null);
 
 
   
