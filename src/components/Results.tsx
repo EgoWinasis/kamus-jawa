@@ -61,9 +61,14 @@ export default function Results() {
         if (dataSame.length > 0) {
               handleGetDetail(dataSame[0].slug);
         }
-      } catch (err: any) {
-        setError(err.message || "Terjadi kesalahan saat mengambil data.");
-      } finally {
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError("Terjadi kesalahan saat mengambil data.");
+        }
+      }
+       finally {
         setLoading(false);
       }
     };
@@ -77,7 +82,7 @@ export default function Results() {
         const response = await fetch(`${API_BASE_URL}/public/detail/${param}`);
         const data = await response.json();
         
-        console.log(data); // Debugging: check the structure of data
+       
         
         if (data && typeof data === "object") {
             setDetailData(data);
