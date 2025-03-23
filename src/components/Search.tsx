@@ -28,12 +28,12 @@ export default function Search() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-9 space-y-2">
+    <div className="flex flex-col items-center justify-center mt-9 mx-3 space-y-2">
       <Image
         src="/gambar.png"
         alt="Logo"
-        width={100} // Set appropriate width
-        height={100} // Set appropriate height
+        width={1920} // Set appropriate width
+        height={1080} // Set appropriate height
         className="w-100 h-auto"
         />
       <div className="flex items-center w-full max-w-md bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden">

@@ -16,62 +16,51 @@ import {
 const ContactPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-6 py-12">
-      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden p-8">
-        {/* Tentang Saya & Gambar */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-  {/* Tentang Saya */}
-  <div className="text-left">
-    <h1 className="text-3xl font-bold text-gray-800">Tentang Saya</h1>
-    <p className="mt-4 text-gray-700 text-lg leading-relaxed">
-      Saya <span className="font-semibold">Ego Winasis</span>, seorang 
-      <span className="font-semibold"> Fullstack Developer</span> dan 
-      <span className="font-semibold"> IT Enthusiast</span> dengan pengalaman luas dalam pengembangan perangkat lunak. 
-      Keahlian saya mencakup pengembangan aplikasi berbasis web, integrasi sistem, serta implementasi teknologi IoT. 
-    </p>
-  </div>
-  {/* Gambar */}
-  <Image
-    src="/profile1.jpg"
-    alt="Profile 1"
-    width={400}
-    height={400}
-    className="w-full h-auto object-cover rounded-lg shadow"
-  />
-</div>
+      <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg overflow-hidden p-8 text-center">
+        
+        {/* Profile Image (Centered) */}
+        <div className="flex justify-center">
+          <Image
+            src="/profile1.jpg"
+            alt="Profile"
+            width={400}
+            height={400}
+            className="w-full max-w-xs md:max-w-sm h-auto object-cover rounded-lg shadow"
+          />
+        </div>
 
-{/* Biodata & Gambar */}
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mt-8">
-  {/* Gambar */}
-  <Image
-    src="/profile2.jpg"
-    alt="Profile 2"
-    width={400}
-    height={400}
-    className="w-full h-auto object-cover rounded-lg shadow"
-  />
-  {/* Biodata */}
-  <div className="text-left">
-    <h2 className="text-2xl font-semibold text-gray-800">Informasi Pribadi</h2>
-    <ul className="mt-4 text-gray-700 text-lg space-y-3">
-      <li className="flex items-center gap-3">
-        <MapPinIcon className="h-6 w-6 text-gray-600" />
-        Tegal, Indonesia
-      </li>
-      <li className="flex items-center gap-3">
-        <AtSymbolIcon className="h-6 w-6 text-gray-600" />
-        egowinasis12@gmail.com
-      </li>
-      <li className="flex items-center gap-3">
-        <BriefcaseIcon className="h-6 w-6 text-gray-600" />
-        Fullstack Developer & IT Enthusiast
-      </li>
-    </ul>
-  </div>
-</div>
+        {/* Tentang Saya */}
+        <div className="mt-6">
+          <h1 className="text-3xl font-bold text-gray-800">Tentang Saya</h1>
+          <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+            Saya <span className="font-semibold">Ego Winasis</span>, seorang 
+            <span className="font-semibold"> Fullstack Developer</span> dan 
+            <span className="font-semibold"> IT Enthusiast</span> dengan pengalaman luas dalam pengembangan perangkat lunak. 
+            Keahlian saya mencakup pengembangan aplikasi berbasis web, integrasi sistem, serta implementasi teknologi IoT. 
+          </p>
+        </div>
 
+        {/* Informasi Pribadi */}
+        <div className="mt-8">
+          <h2 className="text-2xl font-semibold text-gray-800">Informasi Pribadi</h2>
+          <ul className="mt-4 text-gray-700 text-lg space-y-3">
+            <li className="flex items-center justify-center gap-3">
+              <MapPinIcon className="h-6 w-6 text-gray-600" />
+              Tegal, Indonesia
+            </li>
+            <li className="flex items-center justify-center gap-3">
+              <AtSymbolIcon className="h-6 w-6 text-gray-600" />
+              egowinasis12@gmail.com
+            </li>
+            <li className="flex items-center justify-center gap-3">
+              <BriefcaseIcon className="h-6 w-6 text-gray-600" />
+              Fullstack Developer & IT Enthusiast
+            </li>
+          </ul>
+        </div>
 
-        {/* Follow Me */}
-        <div className="mt-10 text-center">
+        {/* Follow Me Section */}
+        <div className="mt-10">
           <h2 className="text-2xl font-semibold text-gray-800">Follow Me</h2>
           <div className="mt-4 flex justify-center space-x-6">
             <a
