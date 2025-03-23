@@ -36,9 +36,9 @@ export default function Results() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  const param1 = searchParams.get("param1") || "terms"; // Default to "terms"
+  const param1 = "terms"; // Default to "terms"
   const param2 = searchParams.get("param") || "";
-  const page = parseInt(searchParams.get("page") || "1", 10);
+  const page = 1;
 
 
   const [relatedTerms, setRelatedTerms] = useState<Term[]>([]);
