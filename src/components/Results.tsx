@@ -88,6 +88,7 @@ export default function Results() {
             setDetailData(data);
         }
     } catch (error) {
+        console.error("Error fetching data:", error);
         Swal.fire({
             icon: "error",
             title: "Kesalahan",
