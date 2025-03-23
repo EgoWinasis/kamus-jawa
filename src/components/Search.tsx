@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import Swal from "sweetalert2";
-
+import Image from "next/image";
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -29,7 +29,13 @@ export default function Search() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-9 space-y-2">
-      <img src="/gambar.png" alt="Logo" className="w-100 h-auto" />
+      <Image
+        src="/gambar.png"
+        alt="Logo"
+        width={100} // Set appropriate width
+        height={100} // Set appropriate height
+        className="w-100 h-auto"
+        />
       <div className="flex items-center w-full max-w-md bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden">
         <input
           type="text"
