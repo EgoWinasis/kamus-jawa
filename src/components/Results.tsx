@@ -7,17 +7,21 @@ import Swal from "sweetalert2";
 const API_BASE_URL = "https://senaraiistilahjawa.kemdikbud.go.id/api/v1";
 
 interface Term {
-  term: string;
-  definition: string;
+  name: string;
+  slug: string;
+  description: string;
 }
 
 interface ApiResponse {
-  data: Term[];
+  terms: {
+    data: Term[];
+  };
   meta: {
     current_page: number;
     last_page: number;
   };
 }
+
 
 export default function Results() {
   const searchParams = useSearchParams();
