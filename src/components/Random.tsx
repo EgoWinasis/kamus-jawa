@@ -6,7 +6,7 @@
     const API_BASE_URL = "https://senaraiistilahjawa.kemdikbud.go.id/api/v1";
 
     const Random = () => {
-    const [randomWords, setRandomWords] = useState([]);
+    const [randomWords, setRandomWords] = useState<any[]>([]);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
 
