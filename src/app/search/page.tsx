@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Search from "@/components/Search";
+import Results from "@/components/Results";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
 
       {/* Main content should grow to push the footer down */}
       <main className="flex-grow">
-        <Search />
+        <Results />
       </main>
 
       <Footer />
