@@ -32,7 +32,7 @@ const ContactPage = () => {
         {/* Tentang Saya */}
         <div className="mt-6">
           <h1 className="text-3xl font-bold text-gray-800">Tentang Saya</h1>
-          <p className="mt-4 text-gray-700 text-lg leading-relaxed">
+          <p className="mt-4 text-gray-700 text-lg leading-relaxed text-justify">
             Saya <span className="font-semibold">Ego Winasis</span>, seorang 
             <span className="font-semibold"> Fullstack Developer</span> dan 
             <span className="font-semibold"> IT Enthusiast</span> dengan pengalaman luas dalam pengembangan perangkat lunak. 
