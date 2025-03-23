@@ -35,7 +35,7 @@
     }, []);
 
 
-    const handleClick = (word) => {
+    const handleClick = (word: string) => {
         router.push(`/search?param=${encodeURIComponent(word)}`);
       };
 
